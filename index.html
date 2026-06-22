@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080d1a">
+    <title>霓虹方块</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hero">
+        <p class="eyebrow">CLASSIC BLOCKS</p>
+        <h1>霓虹方块</h1>
+        <p>堆叠、消除，挑战更快的节奏。</p>
+      </header>
+
+      <section class="game-layout" aria-label="俄罗斯方块游戏">
+        <div class="board-wrap">
+          <canvas id="board" width="300" height="600" aria-label="游戏区域"></canvas>
+          <div id="status" class="status" aria-live="polite">准备好了吗？</div>
+        </div>
+
+        <aside class="side-panel">
+          <section class="stats" aria-label="游戏数据">
+            <div><span>分数</span><strong id="score">0</strong></div>
+            <div><span>消除</span><strong id="lines">0</strong></div>
+            <div><span>等级</span><strong id="level">1</strong></div>
+          </section>
+
+          <section class="next-card">
+            <h2>下一个</h2>
+            <canvas id="next" width="144" height="112" aria-label="下一个方块"></canvas>
+          </section>
+
+          <div class="actions">
+            <button id="start-button" class="primary" type="button">开始游戏</button>
+            <button id="pause-button" type="button" disabled>暂停</button>
+          </div>
+
+          <section class="controls">
+            <h2>操作</h2>
+            <dl>
+              <div><dt>← →</dt><dd>左右移动</dd></div>
+              <div><dt>↑</dt><dd>旋转</dd></div>
+              <div><dt>↓</dt><dd>加速下落</dd></div>
+              <div><dt>空格</dt><dd>直接落下</dd></div>
+              <div><dt>P</dt><dd>暂停 / 继续</dd></div>
+            </dl>
+          </section>
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
+
